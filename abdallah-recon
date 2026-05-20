@@ -1,0 +1,29 @@
+#!/bin/bash
+
+domain=""
+output="recon"
+
+while getopts "d:o:h" opt; do
+  case $opt in
+    d) domain=$OPTARG ;;
+    o) output=$OPTARG ;;
+    h)
+      echo "Usage: abdallah-recon -d example.com -o output"
+      exit 0
+      ;;
+  esac
+done
+
+if [ -z "$domain" ]; then
+    echo "[-] Missing domain (-d)"
+    exit 1
+fi
+
+echo "================================="
+echo "   Abdallah Recon Tool"
+echo "================================="
+echo "[+] Target: $domain"
+
+mkdir -p $output/$domain
+
+bash core.sh $domain $output
