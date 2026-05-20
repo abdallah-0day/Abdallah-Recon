@@ -1,0 +1,4 @@
+http://zonetransfer.me
+http://zonetransfer.me/favicon.ico
+http://zonetransfer.me/robots.txt
+https://www.zonetransfer.me/sitemap.xml
